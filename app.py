@@ -8,6 +8,7 @@ Endpoints needed:
 from flask import Flask, request
 from webapp.handlers.create import CreateNewGame
 from webapp.handlers.get_current import GetCurrentState
+from webapp.handlers.edit_game import EditGameState
 
 
 # Variables here
@@ -69,7 +70,12 @@ def edit_game(gid):
         return status
     else:
         # make a change to the game state
-        pass
+        token = request.args.get('token')
+        word = request.args.get('word')
+        present, status = EditGameState(int(gid), token, word)
+        if not present:
+            return bad_response("Wrong ID or token")
+        return status
 
 
 if __name__ == "__main__":

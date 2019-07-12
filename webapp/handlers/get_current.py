@@ -3,7 +3,7 @@ import json
 import time
 
 
-def GetCurrentState(_id):
+def GetCurrentState(_id: int) -> (bool, {}):
     if _id in ID_TOKEN:
         g = TOKEN_SESSION[ID_TOKEN[_id]]
         time_left = g.endtime - time.time()
@@ -19,10 +19,11 @@ def GetCurrentState(_id):
             "points": g.points
         })
 
-        if time_left == 0:
-            print('deleting!')
-            del TOKEN_SESSION[ID_TOKEN[_id]]
-            del ID_TOKEN[_id]
+        # todo: decide if this is needed, for optimizing purposes
+        # if time_left == 0:
+        #     print('deleting!')
+        #     del TOKEN_SESSION[ID_TOKEN[_id]]
+        #     del ID_TOKEN[_id]
 
         return True, resp
     else:
