@@ -13,17 +13,25 @@ class GameBoard:
     Gameboard should be the object that
     determines the current state of the game
     """
-    def __init__(self, existing_board:[[str]] = None):
+    def __init__(self):
         self.gameboard = ""
         self.gameboard2D = [[''] * 4] * 4  # initialise with fixed size
 
-        if existing_board:
-            self.gameboard2D = existing_board
-            for pos, row in enumerate(existing_board):
-                self.gameboard += ', '.join(row)
-                if pos != len(existing_board)-1:
-                    self.gameboard += ', '
+    def from_gameboard_string(self, board):
+        self.gameboard = board
+        parsed_gameboard = self.gameboard.split(', ')
+        for i in range(4):
+            for j in range(4):
+                self.gameboard2D[i][j] = parsed_gameboard[i + j]
 
+    def from_2D_array(self, existing_board):
+        self.gameboard2D = existing_board
+        for pos, row in enumerate(existing_board):
+            self.gameboard += ', '.join(row)
+            if pos != len(existing_board) - 1:
+                self.gameboard += ', '
+
+    # public functions
     def CreateNewBoard(self):
         """
         Creates new board as comma-separated string
@@ -41,18 +49,13 @@ class GameBoard:
                     self.gameboard += "{}, ".format(chosen)
                 self.gameboard2D[i][j] = chosen
 
-    def UseDefaultBoard(self):
-        # todo: might have to change this to accept filepath string later
+    def UseDefaultBoard(self, filepath):
         """
         Uses default board from test_board
         :return: default board as string
         """
-        with open('test_board.txt', 'r') as f:
-            self.gameboard = f.read().strip()
-            parsed_gameboard = self.gameboard.split(', ')
-            for i in range(4):
-                for j in range(4):
-                    self.gameboard2D[i][j] = parsed_gameboard[i+j]
+        with open(filepath, 'r') as f:
+            self.from_gameboard_string(f.read().strip())
 
     def __str__(self):
         """

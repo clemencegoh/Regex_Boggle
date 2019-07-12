@@ -6,6 +6,7 @@ Endpoints needed:
 """
 
 from flask import Flask, request
+from webapp.handlers.create import CreateNewGame
 
 
 # Variables here
@@ -15,7 +16,56 @@ SAVE_DIR = './saved_states/'
 
 @app.route('/games', methods=['POST'])
 def create_game():
-    return 'Hello, World!'
+    """
+    Parameters:
+        - Duration (time in seconds)
+        - Random (bool, whether to initiate new board)
+        - Board (if not random, will use this)
+    :return: 201
+    """
+
+    duration = request.form.get("duration")
+    random = request.form.get("random")
+
+    if not duration or not random:
+        # check again
+        duration = request.args.get("duration")
+        random = request.args.get('random')
+
+        if not duration or not random:
+            # required fields
+            response = app.response_class(
+                response="one or more fields unfilled",
+                status=400
+            )
+            return response
+
+    try:
+        random = bool(random)
+        duration = int(duration)
+        board = request.form.get("board")
+        if not board:
+            board = request.args.get('board')
+        data = CreateNewGame(duration, random, board)
+        response = app.response_class(
+            response=data,
+            status=201,
+            mimetype='application/json'
+        )
+        return response
+    except ValueError:
+        response = app.response_class(
+            response="unable to parse duration",
+            status=400
+        )
+        return response
+    except Exception:
+        print('here?')
+        response = app.response_class(
+            response="unable to parse random",
+            status=400
+        )
+        return response
 
 
 @app.route('/games/<id>', methods=['PUT', 'GET'])
@@ -29,5 +79,9 @@ def edit_game(id):
 
 
 if __name__ == "__main__":
+    """
+    For development purposes only,
+    single-threaded instance
+    """
     # app.run(host="0.0.0.0", port=80)
-    app.run(port=8080)
+    app.run(port=5000)

@@ -3,15 +3,34 @@ Tests for all endpoints
 """
 
 import unittest
+import requests
+import json
+
+
+BASE_URL = 'http://localhost:5000/games'
 
 
 class TestEndpoints(unittest.TestCase):
+
     def test_create_valid(self):
         """
         Create new game with valid params
         :return: 201 response with json
         """
-        pass
+        params = {
+            "duration": 1000,
+            "random": True,
+            "board": ""
+        }
+        resp = requests.post(BASE_URL, params=params)
+        self.assertEqual(resp.status_code, 201, "response code not correct")
+        content = json.loads(resp.content)
+        print(content)
+        self.assertIsNotNone(content, "No json body returned")
+        self.assertTrue(content['id'], 'id empty: {}'.format(content['id']))
+        self.assertTrue(content['token'], 'token empty: {}'.format(content['token']))
+        self.assertTrue(content['duration'], 'duration empty: {}'.format(content['duration']))
+        self.assertTrue(content['board'], 'board empty: {}'.format(content['board']))
 
     def test_create_invalid(self):
         """

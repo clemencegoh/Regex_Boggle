@@ -3,7 +3,7 @@ Tests for all endpoints
 """
 
 import unittest
-import data.gameboard as gameboard
+import webapp.DAO.gameboard as gameboard
 
 
 class TestDataParser(unittest.TestCase):
@@ -24,11 +24,10 @@ class TestDataParser(unittest.TestCase):
             self.assertTrue(new_board[0].isupper(), "Not uppercase letter, got {}".format(new_board[0]))
 
     def test_use_existing(self):
-        self.Gameboard.UseDefaultBoard()
+        self.Gameboard.UseDefaultBoard('../data/test_board.txt')
         self.assertEqual('T, A, P, *, E, A, K, S, O, B, R, S, S, *, X, D',
                          self.Gameboard.gameboard,
                          "Gameboard was parsed wrongly")
-
 
 
 if __name__ == '__main__':
