@@ -1,20 +1,16 @@
 from ..DAO.gamestate import GameState
+from .session import ID_TOKEN, TOKEN_SESSION
 import json
-
-# change to SQL if needed
-ID_TOKEN = {}
-TOKEN_SESSION = {}
 
 
 def CreateNewGame(duration: int, random: bool, board: str):
-    global ID_TOKEN, TOKEN_SESSION
     # create new gamestate
     g = GameState(duration, random, board)
 
     # cache in current session and set id
-    id = g.GenerateNewID()
+    current_id = g.GenerateNewID()
     token = g.GenerateToken()
-    ID_TOKEN[id] = token
+    ID_TOKEN[current_id] = token
     TOKEN_SESSION[token] = g
 
     return json.dumps({

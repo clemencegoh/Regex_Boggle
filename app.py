@@ -7,11 +7,20 @@ Endpoints needed:
 
 from flask import Flask, request
 from webapp.handlers.create import CreateNewGame
+from webapp.handlers.get_current import GetCurrentState
 
 
 # Variables here
 app = Flask(__name__)
 SAVE_DIR = './saved_states/'
+
+
+def bad_response(msg: str):
+    response = app.response_class(
+        response=msg,
+        status=400
+    )
+    return response
 
 
 @app.route('/games', methods=['POST'])
@@ -24,28 +33,19 @@ def create_game():
     :return: 201
     """
 
-    duration = request.form.get("duration")
-    random = request.form.get("random")
+    duration = request.args.get("duration")
+    random = request.args.get('random')
 
     if not duration or not random:
-        # check again
-        duration = request.args.get("duration")
-        random = request.args.get('random')
-
-        if not duration or not random:
-            # required fields
-            response = app.response_class(
-                response="one or more fields unfilled",
-                status=400
-            )
-            return response
+        # required fields
+        return bad_response("one or more fields unfilled")
 
     try:
         random = bool(random)
         duration = int(duration)
-        board = request.form.get("board")
-        if not board:
-            board = request.args.get('board')
+        board = request.args.get('board')
+
+        # create new game here and save
         data = CreateNewGame(duration, random, board)
         response = app.response_class(
             response=data,
@@ -54,25 +54,19 @@ def create_game():
         )
         return response
     except ValueError:
-        response = app.response_class(
-            response="unable to parse duration",
-            status=400
-        )
-        return response
+        return bad_response("unable to parse duration")
     except Exception:
-        print('here?')
-        response = app.response_class(
-            response="unable to parse random",
-            status=400
-        )
-        return response
+        return bad_response("unable to parse random")
 
 
-@app.route('/games/<id>', methods=['PUT', 'GET'])
-def edit_game(id):
+@app.route('/games/<gid>', methods=['PUT', 'GET'])
+def edit_game(gid):
     if request.method == "GET":
         # Get current status of game
-        pass
+        present, status = GetCurrentState(int(gid))
+        if not present:
+            return bad_response("No such id present")
+        return status
     else:
         # make a change to the game state
         pass
