@@ -1,8 +1,43 @@
-from ..DAO.gamestate import GameState
-from ..DAO.gameboard import GameBoard
+from webapp.DAO.gamestate import GameState
+from webapp.DAO.gameboard import GameBoard
 from webapp.handlers.create import TOKEN_SESSION, ID_TOKEN
 import json
 import time
+
+from webapp.data.valid_words import GetValidWords
+
+
+def check_around_pos(i: int, j: int, word: str,
+                     gameboard2D: [[str]],
+                     seen: [[str]]) -> bool:
+    # base case: exhausted path
+    if len(word) == 0:
+        return True
+
+    # base case: limit exceeded
+    if i < 0 or i >= len(gameboard2D) or j < 0 or j >= len(gameboard2D):
+        return False
+
+    # base case: seen before
+    if seen[i][j]:
+        return False
+
+    # base case: current pos does not match
+    if gameboard2D[i][j] != '*' and gameboard2D[i][j] != word[0]:
+        return False
+
+    # recursive
+    seen[i][j] = True
+    up = check_around_pos(i - 1, j, word[1:], gameboard2D, seen)
+    up_right = check_around_pos(i-1, j+1, word[1:], gameboard2D, seen)
+    right = check_around_pos(i, j + 1, word[1:], gameboard2D, seen)
+    down_right = check_around_pos(i + 1, j + 1, word[1:], gameboard2D, seen)
+    down = check_around_pos(i + 1, j, word[1:], gameboard2D, seen)
+    down_left = check_around_pos(i - 1, j - 1, word[1:], gameboard2D, seen)
+    left = check_around_pos(i, j - 1, word[1:], gameboard2D, seen)
+    up_left = check_around_pos(i - 1, j - 1, word[1:], gameboard2D, seen)
+
+    return up or up_right or right or down_right or down or down_left or left or up_left
 
 
 def Search(_word: str, gameboard: GameBoard) -> bool:
@@ -14,10 +49,24 @@ def Search(_word: str, gameboard: GameBoard) -> bool:
     :param gameboard: current gameboard
     :return: whether word is present
     """
-    pass
+    found = False
+
+    pos = gameboard.positions[_word[0]]  # get starting positions
+    pos.extend(gameboard.positions['*'])  # every * is a possible start too
+    for coords in pos:
+        seen = [[False for i in range(4)] for j in range(4)]
+        found = found or check_around_pos(coords[0],
+                                           coords[1],
+                                           _word,
+                                           gameboard.gameboard2D,
+                                           seen)
+        # optimisation
+        if found:
+            return True
+    return False
 
 
-def CheckWord(_word: str, gamestate: GameState, _valid_words: {str}) -> object:
+def CheckWord(_word: str, gamestate: GameState, _valid_words: {str}) -> GameState:
     """
     Placeholder for now, will do the following:
     - Check if word is in dict
@@ -28,11 +77,17 @@ def CheckWord(_word: str, gamestate: GameState, _valid_words: {str}) -> object:
     :param _valid_words: dict of valid words
     :return: new state
     """
-    if _word in _valid_words:
-        # word must be valid in the first place
-        if Search(_word, gamestate.gameboard):
-            # todo: add to score based on rules of boggle
-            gamestate.points += 10
+    # check if tried already
+    if _word not in gamestate.tried_words:
+        gamestate.tried_words.add(_word)
+
+        # check if valid word
+        if _word in _valid_words:
+
+            # check if in gameboard
+            if Search(_word, gamestate.gameboard):
+                # todo: add to score based on rules of boggle
+                gamestate.points += 10
 
     return gamestate
 
@@ -64,5 +119,4 @@ def EditGameState(_id: int, _token: str,
                 "points": g.points
             })
     return False, ""
-
 

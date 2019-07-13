@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1afc76dc-82fe-4cbf-86a4-56bf245b498e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/DAO/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/DAO/gameboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/DAO/gameboard_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/DAO/gameboard_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/data/valid_words.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/data/valid_words.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/DAO/gamestate.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/DAO/gamestate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/handlers/create.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/handlers/create.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/handlers/edit_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/handlers/edit_game.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,47 +14,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.57322836">
+    <splitter split-orientation="horizontal" split-proportion="0.5374901">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/webapp/DAO/gameboard.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="169">
-                  <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#62#75#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webapp/DAO/gameboard_test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#33#48#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webapp/data/test_board.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="18">
-                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="206">
+                  <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
                   <folding>
                     <element signature="e#206#238#0" expanded="true" />
                   </folding>
@@ -64,25 +29,22 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#0#7#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1116">
+                  <caret line="66" selection-start-line="66" selection-end-line="66" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app_test.py">
+            <entry file="file://$PROJECT_DIR$/webapp/handlers/create.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="404">
-                  <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+                <state relative-caret-position="144">
+                  <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
                   <folding>
-                    <element signature="e#33#48#0" expanded="true" />
+                    <element signature="e#0#37#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -91,10 +53,22 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webapp/DAO/gamestate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+                <state relative-caret-position="478">
+                  <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app_test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="458">
+                  <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#33#48#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -114,6 +88,18 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/webapp/DAO/gameboard.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-198">
+                  <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#62#75#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/problem/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SECOND">
@@ -158,17 +144,17 @@
         <option value="$PROJECT_DIR$/webapp/objects.py" />
         <option value="$PROJECT_DIR$/webapp/DAO/session_cache.py" />
         <option value="$PROJECT_DIR$/webapp/DAO/gamestate_test.py" />
-        <option value="$PROJECT_DIR$/webapp/DAO/gamestate.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/webapp/handlers/session.py" />
-        <option value="$PROJECT_DIR$/webapp/handlers/create.py" />
         <option value="$PROJECT_DIR$/app_test.py" />
         <option value="$PROJECT_DIR$/webapp/handlers/get_current.py" />
         <option value="$PROJECT_DIR$/webapp/data/valid_words.py" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/webapp/handlers/edit_game.py" />
-        <option value="$PROJECT_DIR$/webapp/DAO/gameboard_test.py" />
         <option value="$PROJECT_DIR$/webapp/DAO/gameboard.py" />
+        <option value="$PROJECT_DIR$/webapp/DAO/gameboard_test.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/webapp/DAO/gamestate.py" />
+        <option value="$PROJECT_DIR$/webapp/handlers/create.py" />
+        <option value="$PROJECT_DIR$/webapp/handlers/edit_game.py" />
       </list>
     </option>
   </component>
@@ -244,20 +230,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for gameboard_test.TestDataParser.test_parse_positions">
-    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.edit_game">
+    <configuration name="edit_game" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Regex_Boggle" />
-      <option name="target" value="$PROJECT_DIR$/app.py" />
-      <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webapp/handlers" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webapp/handlers/edit_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Regex_Boggle" type="Python.FlaskServer">
@@ -275,22 +268,6 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for app_test.TestEndpoints.test_get_status_valid" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Regex_Boggle" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;test_get_status_valid&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;app_test.TestEndpoints.test_get_status_valid&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for gameboard_test.TestDataParser" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Regex_Boggle" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,6 +281,22 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;gameboard_test.TestDataParser&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for gameboard_test.TestDataParser.test_create_board" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Regex_Boggle" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webapp/DAO" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;gameboard_test.TestDataParser.test_create_board&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -323,29 +316,29 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in app_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in gameboard_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Regex_Boggle" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webapp/DAO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/app_test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/webapp/DAO/gameboard_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.edit_game" />
+        <item itemvalue="Python tests.pytest for gameboard_test.TestDataParser.test_create_board" />
+        <item itemvalue="Python tests.pytest in gameboard_test.py" />
         <item itemvalue="Python tests.pytest for gameboard_test.TestDataParser.test_parse_positions" />
         <item itemvalue="Python tests.pytest for gameboard_test.TestDataParser" />
-        <item itemvalue="Python tests.pytest for app_test.TestEndpoints.test_get_status_valid" />
-        <item itemvalue="Flask server.Flask (app.py)" />
-        <item itemvalue="Python tests.pytest in app_test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -362,57 +355,58 @@
       <workItem from="1562929526134" duration="3123000" />
       <workItem from="1562934957748" duration="12054000" />
       <workItem from="1562951700840" duration="1785000" />
-      <workItem from="1562980014242" duration="4122000" />
+      <workItem from="1562980014242" duration="4939000" />
+      <workItem from="1562988039669" duration="2108000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_app_test_TestEndpoints_test_get_status_valid - 2019.07.12 at 23h 55m 08s.xml">
-      <configuration name="pytest for app_test.TestEndpoints.test_get_status_valid" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_app_test_TestEndpoints_test_get_status_valid - 2019.07.12 at 23h 55m 43s.xml">
-      <configuration name="pytest for app_test.TestEndpoints.test_get_status_valid" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser - 2019.07.13 at 10h 01m 50s.xml">
-      <configuration name="pytest for gameboard_test.TestDataParser" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 10m 14s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 16m 09s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 10m 53s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 17m 01s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 11m 47s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 17m 39s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 12m 57s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 17m 57s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 13m 54s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 20m 18s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 14m 47s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 21m 31s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 15m 03s.xml">
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_parse_positions - 2019.07.13 at 10h 22m 17s.xml">
       <configuration name="pytest for gameboard_test.TestDataParser.test_parse_positions" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_gameboard_test_py - 2019.07.13 at 10h 22m 21s.xml">
+      <configuration name="pytest in gameboard_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_create_board - 2019.07.13 at 10h 23m 41s.xml">
+      <configuration name="pytest for gameboard_test.TestDataParser.test_create_board" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_create_board - 2019.07.13 at 10h 25m 17s.xml">
+      <configuration name="pytest for gameboard_test.TestDataParser.test_create_board" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21084000" />
+    <option name="totallyTimeSpent" value="24009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.14879356" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.1508043" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.15482573" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="Job Explorer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.51768035" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36775106" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,7 +414,7 @@
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30975956" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30975956" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="13" show_stripe_button="false" weight="0.32956153" />
@@ -439,16 +433,17 @@
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_app_test_py.coverage" NAME="pytest in app_test.py Coverage Results" MODIFIED="1562946582165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_data_parser_test_TestDataParser.coverage" NAME="pytest for data_parser_test.TestDataParser Coverage Results" MODIFIED="1562929549052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_app_test_TestEndpoints_test_create_invalid.coverage" NAME="pytest for app_test.TestEndpoints.test_create_invalid Coverage Results" MODIFIED="1562945930416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_gameboard_test_TestDataParser_test_parse_positions.coverage" NAME="pytest for gameboard_test.TestDataParser.test_parse_positions Coverage Results" MODIFIED="1562984143356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
+    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_gameboard_test_TestDataParser_test_parse_positions.coverage" NAME="pytest for gameboard_test.TestDataParser.test_parse_positions Coverage Results" MODIFIED="1562984536232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_data_parser_test_TestDataParser_test_parse_valid_words.coverage" NAME="pytest for data_parser_test.TestDataParser.test_parse_valid_words Coverage Results" MODIFIED="1562930081800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_gameboard_test_TestDataParser.coverage" NAME="pytest for gameboard_test.TestDataParser Coverage Results" MODIFIED="1562983303710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
-    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_gameboard_test_TestDataParser_test_create_board.coverage" NAME="pytest for gameboard_test.TestDataParser.test_create_board Coverage Results" MODIFIED="1562932419892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_app_test_TestEndpoints_test_get_status_valid.coverage" NAME="pytest for app_test.TestEndpoints.test_get_status_valid Coverage Results" MODIFIED="1562946937651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_gameboard_test_TestDataParser_test_create_board.coverage" NAME="pytest for gameboard_test.TestDataParser.test_create_board Coverage Results" MODIFIED="1562984716285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_gamestate_test_py.coverage" NAME="pytest in gamestate_test.py Coverage Results" MODIFIED="1562942233114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_data_parser_test_TestDataParser_test_parse_simple.coverage" NAME="pytest for data_parser_test.TestDataParser.test_parse_simple Coverage Results" MODIFIED="1562929620907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/Regex_Boggle$edit_game.coverage" NAME="edit_game Coverage Results" MODIFIED="1562990318727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/handlers" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1562946935110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_data_parser_test_py.coverage" NAME="pytest in data_parser_test.py Coverage Results" MODIFIED="1562930100883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_gameboard_test_py.coverage" NAME="pytest in gameboard_test.py Coverage Results" MODIFIED="1562941616321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/data" />
+    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_gameboard_test_py.coverage" NAME="pytest in gameboard_test.py Coverage Results" MODIFIED="1562984540366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$data_parser.coverage" NAME="data_parser Coverage Results" MODIFIED="1562929713457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_gameboard_test_TestDataParser_test_use_existing.coverage" NAME="pytest for gameboard_test.TestDataParser.test_use_existing Coverage Results" MODIFIED="1562937664800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_app_test_TestEndpoints_test_create_valid.coverage" NAME="pytest for app_test.TestEndpoints.test_create_valid Coverage Results" MODIFIED="1562945935893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -504,16 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/handlers/create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -538,6 +523,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/data/test_board.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/DAO/gameboard_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="e#33#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/problem/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -546,22 +548,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/DAO/gamestate.py">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="206">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
-          <folding>
-            <element signature="e#33#48#0" expanded="true" />
+            <element signature="e#206#238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -573,50 +565,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game.py">
+    <entry file="file://$PROJECT_DIR$/app_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#7#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#206#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/data/test_board.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/DAO/gameboard_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="458">
+          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
           <folding>
             <element signature="e#33#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/DAO/gamestate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/handlers/create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/DAO/gameboard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state relative-caret-position="-198">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
             <element signature="e#62#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>

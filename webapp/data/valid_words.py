@@ -8,4 +8,4 @@ def GetValidWords(filepath: str) -> {str}:
     """
     with open(filepath, 'r') as f:
         content = f.readlines()
-    return set([line.strip() for line in content])
+    return set([line.strip().upper() for line in content])

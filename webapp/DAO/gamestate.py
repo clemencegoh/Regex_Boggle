@@ -26,6 +26,7 @@ class GameState:
         self.gameboard = g.GameBoard()
         self.token = _token
         self.points = 0
+        self.tried_words = set()
 
         if not _random:
             if not _board:
@@ -34,6 +35,7 @@ class GameState:
                 self.gameboard.from_gameboard_string(_board)
         else:
             self.gameboard.CreateNewBoard()
+        self.gameboard.init_positions()
 
     def GenerateNewID(self):
         """
