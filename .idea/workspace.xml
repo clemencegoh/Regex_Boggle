@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1afc76dc-82fe-4cbf-86a4-56bf245b498e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem/.env" beforeDir="false" afterPath="$PROJECT_DIR$/problem/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/DAO/gamestate.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/DAO/gamestate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/handlers/edit_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/handlers/edit_game.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +21,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="205">
+                  <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
                   <folding>
                     <element signature="e#206#238#0" expanded="true" />
                   </folding>
@@ -27,10 +31,22 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/webapp/handlers/get_current.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="27" column="25" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#58#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2136">
-                  <caret line="121" selection-start-line="121" selection-end-line="121" />
+                <state relative-caret-position="79">
+                  <caret line="59" selection-start-line="59" selection-end-line="59" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -41,8 +57,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webapp/handlers/create.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-15">
-                  <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+                <state relative-caret-position="126">
+                  <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -50,11 +66,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/webapp/DAO/gamestate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="133">
-                  <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+                <state relative-caret-position="97">
+                  <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -62,11 +78,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="872">
-                  <caret line="94" column="46" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
+                <state relative-caret-position="224">
+                  <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
                   <folding>
                     <element signature="e#33#48#0" expanded="true" />
                   </folding>
@@ -99,7 +115,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/webapp/data/test_board.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="18">
@@ -108,7 +124,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/problem/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SECOND">
@@ -159,13 +175,14 @@
         <option value="$PROJECT_DIR$/webapp/handlers/get_current.py" />
         <option value="$PROJECT_DIR$/webapp/DAO/gameboard.py" />
         <option value="$PROJECT_DIR$/webapp/DAO/gameboard_test.py" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/webapp/DAO/gamestate.py" />
         <option value="$PROJECT_DIR$/webapp/handlers/create.py" />
         <option value="$PROJECT_DIR$/webapp/data/valid_words.py" />
-        <option value="$PROJECT_DIR$/webapp/handlers/edit_game.py" />
         <option value="$PROJECT_DIR$/webapp/handlers/edit_game_test.py" />
+        <option value="$PROJECT_DIR$/webapp/handlers/edit_game.py" />
         <option value="$PROJECT_DIR$/app_test.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/webapp/DAO/gamestate.py" />
+        <option value="$PROJECT_DIR$/problem/.env" />
       </list>
     </option>
   </component>
@@ -185,6 +202,11 @@
             <path>
               <item name="Regex_Boggle" type="b2602c69:ProjectViewProjectNode" />
               <item name="Regex_Boggle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Regex_Boggle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Regex_Boggle" type="462c0819:PsiDirectoryNode" />
+              <item name="problem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Regex_Boggle" type="b2602c69:ProjectViewProjectNode" />
@@ -344,8 +366,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for app_test.TestEndpoints.test_play_valid" />
         <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Python tests.pytest for app_test.TestEndpoints.test_play_valid" />
         <item itemvalue="Python tests.pytest for edit_game_test.TestEndpoints.test_checkword_valid" />
         <item itemvalue="Python tests.pytest in edit_game_test.py" />
         <item itemvalue="Python.edit_game" />
@@ -366,44 +388,44 @@
       <workItem from="1562934957748" duration="12054000" />
       <workItem from="1562951700840" duration="1785000" />
       <workItem from="1562980014242" duration="4939000" />
-      <workItem from="1562988039669" duration="3803000" />
+      <workItem from="1562988039669" duration="5096000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_gameboard_test_TestDataParser_test_create_board - 2019.07.13 at 10h 25m 17s.xml">
-      <configuration name="pytest for gameboard_test.TestDataParser.test_create_board" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 31m 25s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_edit_game_test_py - 2019.07.13 at 12h 14m 56s.xml">
-      <configuration name="pytest in edit_game_test.py" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 32m 19s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_edit_game_test_py - 2019.07.13 at 12h 15m 13s.xml">
-      <configuration name="pytest in edit_game_test.py" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 32m 38s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_edit_game_test_py - 2019.07.13 at 12h 15m 48s.xml">
-      <configuration name="pytest in edit_game_test.py" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 34m 24s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_edit_game_test_TestEndpoints_test_checkword_valid - 2019.07.13 at 12h 16m 18s.xml">
-      <configuration name="pytest for edit_game_test.TestEndpoints.test_checkword_valid" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 38m 40s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_edit_game_test_TestEndpoints_test_checkword_valid - 2019.07.13 at 12h 16m 58s.xml">
-      <configuration name="pytest for edit_game_test.TestEndpoints.test_checkword_valid" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 40m 23s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_edit_game_test_TestEndpoints_test_checkword_valid - 2019.07.13 at 12h 17m 54s.xml">
-      <configuration name="pytest for edit_game_test.TestEndpoints.test_checkword_valid" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 40m 45s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_edit_game_test_TestEndpoints_test_checkword_valid - 2019.07.13 at 12h 18m 03s.xml">
-      <configuration name="pytest for edit_game_test.TestEndpoints.test_checkword_valid" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 41m 05s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_edit_game_test_TestEndpoints_test_checkword_valid - 2019.07.13 at 12h 18m 12s.xml">
-      <configuration name="pytest for edit_game_test.TestEndpoints.test_checkword_valid" configurationId="tests" />
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 41m 43s.xml">
+      <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 24m 06s.xml">
+    <history-entry file="pytest_for_app_test_TestEndpoints_test_play_valid - 2019.07.13 at 12h 42m 42s.xml">
       <configuration name="pytest for app_test.TestEndpoints.test_play_valid" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25704000" />
+    <option name="totallyTimeSpent" value="26997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -415,7 +437,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36775106" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36775106" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,7 +445,7 @@
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30975956" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30975956" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="13" show_stripe_button="false" weight="0.32956153" />
@@ -451,9 +473,9 @@
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_gamestate_test_py.coverage" NAME="pytest in gamestate_test.py Coverage Results" MODIFIED="1562942233114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_data_parser_test_TestDataParser_test_parse_simple.coverage" NAME="pytest for data_parser_test.TestDataParser.test_parse_simple Coverage Results" MODIFIED="1562929620907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$edit_game.coverage" NAME="edit_game Coverage Results" MODIFIED="1562990705707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/handlers" />
-    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_app_test_TestEndpoints_test_play_valid.coverage" NAME="pytest for app_test.TestEndpoints.test_play_valid Coverage Results" MODIFIED="1562991839775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_app_test_TestEndpoints_test_play_valid.coverage" NAME="pytest for app_test.TestEndpoints.test_play_valid Coverage Results" MODIFIED="1562992959099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_for_edit_game_test_TestEndpoints_test_checkword_valid.coverage" NAME="pytest for edit_game_test.TestEndpoints.test_checkword_valid Coverage Results" MODIFIED="1562991491836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/handlers" />
-    <SUITE FILE_PATH="coverage/Regex_Boggle$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1562991829519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Regex_Boggle$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1562992956624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_data_parser_test_py.coverage" NAME="pytest in data_parser_test.py Coverage Results" MODIFIED="1562930100883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$pytest_in_gameboard_test_py.coverage" NAME="pytest in gameboard_test.py Coverage Results" MODIFIED="1562984540366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp/DAO" />
     <SUITE FILE_PATH="coverage/Regex_Boggle$data_parser.coverage" NAME="data_parser Coverage Results" MODIFIED="1562929713457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
@@ -518,16 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/handlers/get_current.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/handlers/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -563,23 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/data/test_board.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/handlers/create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/data/dictionary.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -594,26 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/DAO/gamestate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2136">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-108">
@@ -621,22 +596,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/webapp/data/test_board.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/handlers/get_current.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
           <folding>
-            <element signature="e#206#238#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="94" column="46" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
+        <state relative-caret-position="224">
+          <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
           <folding>
             <element signature="e#33#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/handlers/edit_game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+          <folding>
+            <element signature="e#206#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/handlers/create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem/Gemfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/DAO/gamestate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

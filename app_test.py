@@ -96,7 +96,7 @@ class TestEndpoints(unittest.TestCase):
 
         self.assertEqual(10, content['points'])
 
-    def test_play_invalid(self):
+    def test_play_invalid_id(self):
         """
         test play with invalid token
         - missing id
@@ -104,7 +104,51 @@ class TestEndpoints(unittest.TestCase):
         - missing word
         :return: 400
         """
-        pass
+        params = {
+            "duration": 1000,
+            "random": False,
+            "board": ""
+        }
+        resp = requests.post(BASE_URL, params=params)
+        self.assertEqual(resp.status_code, 201, resp.content)
+        content = json.loads(resp.content)
+        gid = content['id']
+        token = content['token']
+
+        params = {
+            'id': 1000,
+            'token': token,
+            'word': 'TAPE'
+        }
+        resp = requests.put(BASE_URL + '/1000', params=params)
+        self.assertEqual(resp.status_code, 400, resp)
+
+    def test_play_invalid_token(self):
+        """
+        test play with invalid token
+        - missing id
+        - missing token
+        - missing word
+        :return: 400
+        """
+        params = {
+            "duration": 1000,
+            "random": False,
+            "board": ""
+        }
+        resp = requests.post(BASE_URL, params=params)
+        self.assertEqual(resp.status_code, 201, resp.content)
+        content = json.loads(resp.content)
+        gid = content['id']
+        token = content['token']
+
+        params = {
+            'id': gid,
+            'token': "00000",
+            'word': 'TAPE'
+        }
+        resp = requests.put(BASE_URL + '/' + str(gid), params=params)
+        self.assertEqual(resp.status_code, 400, resp)
 
     def test_get_status_valid(self):
         """
