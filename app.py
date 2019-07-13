@@ -36,6 +36,11 @@ def custom_bool_conversion(arg: str):
     return False
 
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Welcome!"
+
+
 @app.route('/games', methods=['POST'])
 def create_game():
     """
