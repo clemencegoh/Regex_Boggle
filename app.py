@@ -96,5 +96,5 @@ if __name__ == "__main__":
     For development purposes only,
     single-threaded instance
     """
-    # app.run(host="0.0.0.0", port=80)
-    app.run(port=5000)
+    app.run(host="0.0.0.0", port=80)
+    # app.run(port=5000)
