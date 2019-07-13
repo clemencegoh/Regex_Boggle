@@ -53,7 +53,48 @@ class TestEndpoints(unittest.TestCase):
         test play with valid token
         :return: 200
         """
-        pass
+        params = {
+            "duration": 1000,
+            "random": False,
+            "board": ""
+        }
+        resp = requests.post(BASE_URL, params=params)
+        self.assertEqual(resp.status_code, 201, resp.content)
+        content = json.loads(resp.content)
+        gid = content['id']
+        token = content['token']
+        duration = content['duration']
+        board = content['board']
+
+        params = {
+            'id': gid,
+            'token': token,
+            'word': 'TAPE'
+        }
+        resp = requests.put(BASE_URL + '/' + str(gid), params=params)
+        self.assertEqual(resp.status_code, 200, resp)
+        content = json.loads(resp.content)
+
+        print(content)
+
+        # ensure response correct
+        self.assertIsNotNone(content, "No json body returned")
+
+        self.assertTrue(content['id'], 'id empty: {}'.format(content['id']))
+        self.assertEqual(content['id'], gid, 'id does not match')
+
+        self.assertTrue(content['token'], 'token empty: {}'.format(content['token']))
+        self.assertEqual(content['token'], token, 'token does not match')
+
+        self.assertTrue(content['duration'], 'duration empty: {}'.format(content['duration']))
+        self.assertEqual(content['duration'], duration, 'duration does not match')
+
+        self.assertTrue(content['board'], 'board empty: {}'.format(content['board']))
+        self.assertEqual(content['board'], board)
+
+        self.assertLess(content['time_left'], duration, 'time left should not be greater than duration')
+
+        self.assertEqual(10, content['points'])
 
     def test_play_invalid(self):
         """

@@ -28,6 +28,14 @@ def bad_response(msg: str):
     return response
 
 
+def custom_bool_conversion(arg: str):
+    positives = {'true', 'True', 'yes', 'YES', 'Yes', 'y', 'Y'}
+    # negatives = {'false', 'False', 'no', 'NO', 'No', 'n', 'N'}
+    if arg in positives:
+        return True
+    return False
+
+
 @app.route('/games', methods=['POST'])
 def create_game():
     """
@@ -46,7 +54,7 @@ def create_game():
         return bad_response("one or more fields unfilled")
 
     try:
-        random = bool(random)
+        random = custom_bool_conversion(random)
         duration = int(duration)
         board = request.args.get('board')
 
@@ -60,8 +68,8 @@ def create_game():
         return response
     except ValueError:
         return bad_response("unable to parse duration")
-    except Exception:
-        return bad_response("unable to parse random")
+    except Exception as e:
+        return bad_response("{}".format(e))
 
 
 @app.route('/games/<gid>', methods=['PUT', 'GET'])
@@ -79,6 +87,7 @@ def edit_game(gid):
         present, status = EditGameState(int(gid), token, word, VALID_WORDS)
         if not present:
             return bad_response("Wrong ID or token")
+
         return status
 
 

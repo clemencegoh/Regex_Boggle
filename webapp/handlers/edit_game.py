@@ -50,9 +50,14 @@ def Search(_word: str, gameboard: GameBoard) -> bool:
     :return: whether word is present
     """
     found = False
+    pos = []
 
-    pos = gameboard.positions[_word[0]]  # get starting positions
-    pos.extend(gameboard.positions['*'])  # every * is a possible start too
+    try:
+        pos = gameboard.positions[_word[0]]  # get starting positions
+        pos.extend(gameboard.positions['*'])  # every * is a possible start too
+    except KeyError:
+        pass
+
     for coords in pos:
         seen = [[False for i in range(4)] for j in range(4)]
         found = found or check_around_pos(coords[0],

@@ -28,9 +28,12 @@ class GameState:
         self.points = 0
         self.tried_words = set()
 
+        print('received random:', _random)
+        print('received _board:', _board)
+
         if not _random:
             if not _board:
-                self.gameboard.UseDefaultBoard('../data/test_board.txt')
+                self.gameboard.UseDefaultBoard('webapp/data/test_board.txt')
             else:
                 self.gameboard.from_gameboard_string(_board)
         else:
