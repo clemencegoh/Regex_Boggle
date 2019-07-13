@@ -9,11 +9,15 @@ from flask import Flask, request
 from webapp.handlers.create import CreateNewGame
 from webapp.handlers.get_current import GetCurrentState
 from webapp.handlers.edit_game import EditGameState
+from webapp.data.valid_words import GetValidWords
 
 
 # Variables here
 app = Flask(__name__)
 SAVE_DIR = './saved_states/'
+
+# Init upon start, do only once
+VALID_WORDS = GetValidWords('webapp/data/dictionary.txt')
 
 
 def bad_response(msg: str):
@@ -72,7 +76,7 @@ def edit_game(gid):
         # make a change to the game state
         token = request.args.get('token')
         word = request.args.get('word')
-        present, status = EditGameState(int(gid), token, word)
+        present, status = EditGameState(int(gid), token, word, VALID_WORDS)
         if not present:
             return bad_response("Wrong ID or token")
         return status

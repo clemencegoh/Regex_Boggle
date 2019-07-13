@@ -15,14 +15,29 @@ class GameBoard:
     """
     def __init__(self):
         self.gameboard = ""
-        self.gameboard2D = [[''] * 4] * 4  # initialise with fixed size
+        self.gameboard2D = []
+        self.positions = {}  # positions to help with algorithm
+
+    def init_positions(self):
+        if len(self.positions) <= 1:  # prevents from double init
+            for i in range(len(self.gameboard2D)):
+                for j in range(len(self.gameboard2D[0])):
+                    if self.gameboard2D[i][j] not in self.positions:
+                        self.positions[self.gameboard2D[i][j]] = [(i, j)]
+                    else:
+                        self.positions[self.gameboard2D[i][j]].append((i, j))
 
     def from_gameboard_string(self, board):
         self.gameboard = board
         parsed_gameboard = self.gameboard.split(', ')
+        self.gameboard2D = []
+        counter = 0
+
         for i in range(4):
+            self.gameboard2D.append([])
             for j in range(4):
-                self.gameboard2D[i][j] = parsed_gameboard[i + j]
+                self.gameboard2D[i].append(parsed_gameboard[counter])
+                counter += 1
 
     def from_2D_array(self, existing_board):
         self.gameboard2D = existing_board
@@ -38,16 +53,17 @@ class GameBoard:
         """
         # init new if not already empty
         self.gameboard = ""
-        self.gameboard2D = [[''] * 4] * 4
+        self.gameboard2D = []
 
         for i in range(4):
+            self.gameboard2D.append([])
             for j in range(4):
                 chosen = random.choice(ALL_POSSIBLE)
                 if i == 3 and j == 3:
                     self.gameboard += chosen
                 else:
                     self.gameboard += "{}, ".format(chosen)
-                self.gameboard2D[i][j] = chosen
+                self.gameboard2D[i].append(chosen)
 
     def UseDefaultBoard(self, filepath):
         """
