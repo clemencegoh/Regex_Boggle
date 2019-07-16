@@ -52,9 +52,7 @@ def create_game():
         - Board (if not random, will use this)
     :return: 201
     """
-
-    content = json.loads(request.data.decode())
-    print(content)
+    content = json.loads(request.data)
 
     try:
         duration = content["duration"]
@@ -98,7 +96,7 @@ def edit_game(gid):
             return json.dumps({"message": "No such game session"}), 404
         return status
     else:
-        content = json.loads(request.data.decode())
+        content = json.loads(request.data)
 
         # make a change to the game state
         token = content['token']
@@ -113,24 +111,24 @@ def edit_game(gid):
             print(e)
             return json.dumps({"message": "Game not found"}), 404
 
-app.run(port=5000)
+# app.run(port=5000)
 
 
-# if __name__ == "__main__":
-#     """
-#     For development purposes only,
-#     single-threaded instance
-#     """
-#
-#     parser = argparse.ArgumentParser(description='Runs server for boggle webapp')
-#     parser.add_argument('--dev', action='store_true',
-#                         help='run in dev mode on port 5000')
-#
-#     args = parser.parse_args()
-#
-#     print(args.dev)
-#
-#     if args.dev:
-#         app.run(port=5000)
-#     else:
-#         app.run(host="0.0.0.0", port=80)
+if __name__ == "__main__":
+    """
+    For development purposes only,
+    single-threaded instance
+    """
+
+    parser = argparse.ArgumentParser(description='Runs server for boggle webapp')
+    parser.add_argument('--dev', action='store_true',
+                        help='run in dev mode on port 5000')
+
+    args = parser.parse_args()
+
+    print(args.dev)
+
+    if args.dev:
+        app.run(port=5000)
+    else:
+        app.run(host="0.0.0.0", port=80)
