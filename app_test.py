@@ -23,7 +23,7 @@ class TestEndpoints(unittest.TestCase):
             "random": True,
             "board": ""
         }
-        resp = requests.post(BASE_URL, params=params)
+        resp = requests.post(BASE_URL, json=params)
         self.assertEqual(resp.status_code, 201, "response code not correct")
         content = json.loads(resp.content)
         print(content)
@@ -45,7 +45,7 @@ class TestEndpoints(unittest.TestCase):
             "duration": 1000,
             "board": ""
         }
-        resp = requests.post(BASE_URL, params=params)
+        resp = requests.post(BASE_URL, json=params)
         self.assertEqual(resp.status_code, 400, "response code not correct")
 
     def test_play_valid(self):
@@ -58,7 +58,7 @@ class TestEndpoints(unittest.TestCase):
             "random": False,
             "board": ""
         }
-        resp = requests.post(BASE_URL, params=params)
+        resp = requests.post(BASE_URL, json=params)
         self.assertEqual(resp.status_code, 201, resp.content)
         content = json.loads(resp.content)
         gid = content['id']
@@ -71,7 +71,7 @@ class TestEndpoints(unittest.TestCase):
             'token': token,
             'word': 'TAPE'
         }
-        resp = requests.put(BASE_URL + '/' + str(gid), params=params)
+        resp = requests.put(BASE_URL + '/' + str(gid), json=params)
         self.assertEqual(resp.status_code, 200, resp)
         content = json.loads(resp.content)
 
@@ -109,7 +109,7 @@ class TestEndpoints(unittest.TestCase):
             "random": False,
             "board": ""
         }
-        resp = requests.post(BASE_URL, params=params)
+        resp = requests.post(BASE_URL, json=params)
         self.assertEqual(resp.status_code, 201, resp.content)
         content = json.loads(resp.content)
         gid = content['id']
@@ -120,7 +120,7 @@ class TestEndpoints(unittest.TestCase):
             'token': token,
             'word': 'TAPE'
         }
-        resp = requests.put(BASE_URL + '/1000', params=params)
+        resp = requests.put(BASE_URL + '/1000', json=params)
         self.assertEqual(resp.status_code, 400, resp)
 
     def test_play_invalid_token(self):
@@ -136,7 +136,7 @@ class TestEndpoints(unittest.TestCase):
             "random": False,
             "board": ""
         }
-        resp = requests.post(BASE_URL, params=params)
+        resp = requests.post(BASE_URL, json=params)
         self.assertEqual(resp.status_code, 201, resp.content)
         content = json.loads(resp.content)
         gid = content['id']
@@ -147,7 +147,7 @@ class TestEndpoints(unittest.TestCase):
             'token': "00000",
             'word': 'TAPE'
         }
-        resp = requests.put(BASE_URL + '/' + str(gid), params=params)
+        resp = requests.put(BASE_URL + '/' + str(gid), json=params)
         self.assertEqual(resp.status_code, 400, resp)
 
     def test_get_status_valid(self):
@@ -161,7 +161,7 @@ class TestEndpoints(unittest.TestCase):
             "random": True,
             "board": ""
         }
-        resp = requests.post(BASE_URL, params=params)
+        resp = requests.post(BASE_URL, json=params)
         content = json.loads(resp.content)
         gid = content['id']
         token = content['token']

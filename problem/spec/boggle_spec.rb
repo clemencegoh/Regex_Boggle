@@ -1,8 +1,14 @@
 require 'http'
 require 'json'
 require 'dotenv/load'
+require 'rspec'
+
+include RSpec
+
+puts "Starting tests"
 
 def get(url, id)
+    puts "Getting #{url}/#{id}"
   HTTP.get("#{url}/#{id}")
 end
 
@@ -20,6 +26,8 @@ end
 
 describe 'Boggle API test' do
   let(:url) { "#{ENV['SERVER_URL']}/games" }
+
+  puts "#{ENV['SERVER_URL']}/games"
 
   def assert_error(response, status)
     expect(response.code).to eq status

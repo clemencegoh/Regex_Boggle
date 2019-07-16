@@ -30,7 +30,7 @@ def bad_response(msg: str):
 
 
 def custom_bool_conversion(arg: str):
-    positives = {'true', 'True', 'yes', 'YES', 'Yes', 'y', 'Y'}
+    positives = {'true', 'True', 'yes', 'YES', 'Yes', 'y', 'Y', True}
     # negatives = {'false', 'False', 'no', 'NO', 'No', 'n', 'N'}
     if arg in positives:
         return True
@@ -52,17 +52,19 @@ def create_game():
     :return: 201
     """
 
-    duration = request.args.get("duration")
-    random = request.args.get('random')
-
-    if not duration or not random:
-        # required fields
-        return bad_response("one or more fields unfilled")
+    content = request.json
 
     try:
-        random = custom_bool_conversion(random)
+        duration = content["duration"]
+        random = content['random']
+        board = content['board']
+
+        if not duration:
+            # required fields
+            return bad_response("duration unfilled")
+
+        random = custom_bool_conversion(random)  # catches string variables for random
         duration = int(duration)
-        board = request.args.get('board')
 
         # create new game here and save
         data = CreateNewGame(duration, random, board)
@@ -72,14 +74,17 @@ def create_game():
             mimetype='application/json'
         )
         return response
-    except ValueError:
-        return bad_response("unable to parse duration")
+
+    except KeyError:
+        return bad_response("one or more fields unfilled")
+
     except Exception as e:
         return bad_response("{}".format(e))
 
 
 @app.route('/games/<gid>', methods=['PUT', 'GET'])
 def edit_game(gid):
+
     if request.method == "GET":
         # Get current status of game
         present, status = GetCurrentState(int(gid))
@@ -87,9 +92,11 @@ def edit_game(gid):
             return bad_response("No such id present")
         return status
     else:
+        content = request.json
+
         # make a change to the game state
-        token = request.args.get('token')
-        word = request.args.get('word')
+        token = content['token']
+        word = content['word']
         present, status = EditGameState(int(gid), token, word, VALID_WORDS)
         if not present:
             return bad_response("Wrong ID or token")
