@@ -22,12 +22,10 @@ SAVE_DIR = './saved_states/'
 VALID_WORDS = GetValidWords('webapp/data/dictionary.txt')
 
 
-def bad_response(msg: str):
-    response = app.response_class(
-        response=msg,
-        status=400
-    )
-    return response
+def create_response(msg: str, code: int):
+    return json.dumps({
+        "message": msg,
+    }), code
 
 
 def custom_bool_conversion(arg: str):
@@ -58,15 +56,21 @@ def create_game():
         duration = content["duration"]
         random = content['random']
 
-        if not duration:
+        if not duration or type(duration) != int:
             # required fields
-            return bad_response("duration unfilled")
+            return create_response("duration error", 400)
+        if type(random) != bool:
+            return create_response("random type incorrect", 400)
 
-        random = custom_bool_conversion(random)  # catches string variables for random
-        duration = int(duration)
+        # random = custom_bool_conversion(random)  # catches string variables for random
+        # duration = int(duration)
 
+        if duration < 0:
+            return create_response("duration must be greater than 0", 400)
         try:
             board = content['board']
+            if type(board) != str:
+                return create_response("board type incorrect", 400)
         except KeyError:
             board = ""
 
@@ -80,7 +84,7 @@ def create_game():
         return response
 
     except KeyError:
-        return json.dumps({"message": "Invalid parameters"}), 400
+        return json.dumps({"message": "Invalid or missing parameters"}), 400
 
     except Exception as e:
         return json.dumps({"message": e}), 400
@@ -91,25 +95,49 @@ def edit_game(gid):
 
     if request.method == "GET":
         # Get current status of game
-        present, status = GetCurrentState(int(gid))
+
+        try:
+            gid = int(gid)
+        except ValueError:
+            return create_response("Invalid id type", 400)
+
+        present, status = GetCurrentState(gid)
         if not present:
-            return json.dumps({"message": "No such game session"}), 404
+            return create_response("No such game session", 404)
         return status
     else:
         content = json.loads(request.data)
 
         # make a change to the game state
-        token = content['token']
-        word = content['word'].upper()
         try:
+            gid_data = content['id']
+            token = content['token']
+            word = content['word']
+
+            if type(token) != str or type(word) != str or type(gid_data) != int:
+                return create_response("invalid type for token or word", 400)
+
+            try:
+                gid = int(gid)
+                gid_data = int(gid_data)
+            except ValueError:
+                return create_response("Invalid id type", 400)
+
+            if gid != gid_data:
+                return create_response("id does not match", 400)
+
+            word = word.upper()
+
             present, status = EditGameState(int(gid), token, word, VALID_WORDS)
             if not present:
-                return json.dumps({"message": "Wrong Word or invalid params"}), 404
+                return create_response("Wrong word or invalid", 404)
 
             return status
+        except KeyError:
+            return create_response("missing parameters", 400)
         except Exception as e:
             print(e)
-            return json.dumps({"message": "Game not found"}), 404
+            return create_response(e.__str__(), 404)
 
 # app.run(port=5000)
 
