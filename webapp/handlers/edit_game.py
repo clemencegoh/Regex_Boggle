@@ -82,6 +82,7 @@ def CheckWord(_word: str, gamestate: GameState, _valid_words: {str}) -> GameStat
     :param _valid_words: dict of valid words
     :return: new state
     """
+    correct = False
     # check if tried already
     if _word not in gamestate.tried_words:
         gamestate.tried_words.add(_word)
@@ -91,10 +92,10 @@ def CheckWord(_word: str, gamestate: GameState, _valid_words: {str}) -> GameStat
 
             # check if in gameboard
             if Search(_word, gamestate.gameboard):
-                # todo: add to score based on rules of boggle
-                gamestate.points += 10
+                gamestate.points += len(_word)
+                correct = True
 
-    return gamestate
+    return gamestate, correct
 
 
 def EditGameState(_id: int, _token: str,
@@ -108,12 +109,14 @@ def EditGameState(_id: int, _token: str,
 
             # check for time left, don't bother if over
             if time_left <= 0:
-                time_left = 0
+                return False, ""  # False if game no time left
                 # del TOKEN_SESSION[ID_TOKEN[_id]]
                 # del ID_TOKEN[_id]
             else:
-                g = CheckWord(_word, g, _valid_words)  # update state
+                g, correct = CheckWord(_word, g, _valid_words)  # update state
                 TOKEN_SESSION[_token] = g
+                if not correct:
+                    return False, ""
 
             return True, json.dumps({
                 "id": g.id,

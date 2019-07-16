@@ -27,8 +27,6 @@ end
 describe 'Boggle API test' do
   let(:url) { "#{ENV['SERVER_URL']}/games" }
 
-  puts "#{ENV['SERVER_URL']}/games"
-
   def assert_error(response, status)
     expect(response.code).to eq status
     json = parse(response)

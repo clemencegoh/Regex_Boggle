@@ -19,12 +19,6 @@ def GetCurrentState(_id: int) -> (bool, {}):
             "points": g.points
         })
 
-        # todo: decide if this is needed, for optimizing purposes
-        # if time_left == 0:
-        #     print('deleting!')
-        #     del TOKEN_SESSION[ID_TOKEN[_id]]
-        #     del ID_TOKEN[_id]
-
         return True, resp
     else:
         return False, ""

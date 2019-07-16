@@ -30,6 +30,7 @@ class GameBoard:
     def from_gameboard_string(self, board):
         self.gameboard = board
         parsed_gameboard = self.gameboard.split(', ')
+        parsed_gameboard = [x.upper() for x in parsed_gameboard]
         self.gameboard2D = []
         counter = 0
 
