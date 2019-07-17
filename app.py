@@ -49,17 +49,15 @@ def custom_board_conversion(content) -> str:
         board = content['board']
         if type(board) != str:
             return ""  # accept it anyway
+        return board
     except KeyError:
-        return "Error"
+        return ""
 
 
-def custom_gid_conversion(content) -> int:
+def custom_gid_conversion(arg) -> int:
     try:
-        gid = content['id']
-        gid = int(gid)
+        gid = int(arg)
         return gid
-    except KeyError:
-        return -1
     except ValueError:
         return -1
 
@@ -137,10 +135,10 @@ def edit_game(gid):
     if request.method == "GET":
         # Get current status of game
 
-        try:
-            gid = int(gid)
-        except ValueError:
-            return create_response("Invalid id", 404)
+        gid = custom_gid_conversion(gid)
+
+        if gid == -1:
+            return create_response("invalid id", 404)
 
         present, status = GetCurrentState(gid)
         if not present:
@@ -151,17 +149,14 @@ def edit_game(gid):
 
         # make a change to the game state
         try:
-            gid_data = custom_gid_conversion(content)
             token = custom_token_conversion(content)
             word = custom_word_conversion(content)
+            gid = custom_gid_conversion(gid)
 
-            if token == "Error" or word == "!Error!":
-                return create_response("Invalid token or word", 404)
+            if token == "Error" or word == "!Error!" or gid == -1:
+                return create_response("Invalid token or word or id", 404)
 
-            if int(gid) != gid_data:
-                return create_response("id does not match", 404)
-
-            present, status = EditGameState(int(gid), token, word, VALID_WORDS)
+            present, status = EditGameState(gid, token, word, VALID_WORDS)
             if not present:
                 return create_response("Wrong word or invalid", 404)
 
