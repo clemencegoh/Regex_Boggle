@@ -28,12 +28,58 @@ def create_response(msg: str, code: int):
     }), code
 
 
-def custom_bool_conversion(arg: str):
-    positives = {'true', 'True', 'yes', 'YES', 'Yes', 'y', 'Y', True}
+def custom_bool_conversion(arg) -> bool:
+    positives = {'true', 'True', 'yes', 'YES', 'Yes', 'y', 'Y', True, 1}
     # negatives = {'false', 'False', 'no', 'NO', 'No', 'n', 'N'}
     if arg in positives:
         return True
     return False
+
+
+def custom_duration_conversion(arg) -> int:
+    try:
+        arg = int(arg)
+        return arg
+    except ValueError:
+        return -1
+
+
+def custom_board_conversion(content) -> str:
+    try:
+        board = content['board']
+        if type(board) != str:
+            return ""  # accept it anyway
+    except KeyError:
+        return "Error"
+
+
+def custom_gid_conversion(content) -> int:
+    try:
+        gid = content['id']
+        gid = int(gid)
+        return gid
+    except KeyError:
+        return -1
+    except ValueError:
+        return -1
+
+
+def custom_token_conversion(content) -> str:
+    try:
+        token = content['token']
+        token = str(token)
+        return token
+    except KeyError:
+        return "Error"
+
+
+def custom_word_conversion(content) -> str:
+    try:
+        word = content['word']
+        word = str(word).upper()
+        return word
+    except KeyError:
+        return "!Error!"
 
 
 @app.route('/', methods=['GET'])
@@ -56,23 +102,18 @@ def create_game():
         duration = content["duration"]
         random = content['random']
 
-        if not duration or type(duration) != int:
-            # required fields
-            return create_response("duration error", 400)
-        if type(random) != bool:
-            return create_response("random type incorrect", 400)
+        # convert duration to int
+        duration = custom_duration_conversion(duration)
 
-        # random = custom_bool_conversion(random)  # catches string variables for random
-        # duration = int(duration)
+        # convert random to bool
+        random = custom_bool_conversion(random)
+
+        board = custom_board_conversion(content)
 
         if duration < 0:
-            return create_response("duration must be greater than 0", 400)
-        try:
-            board = content['board']
-            if type(board) != str:
-                return create_response("board type incorrect", 400)
-        except KeyError:
-            board = ""
+            return create_response("duration param error", 400)
+        if board == "Error":
+            return create_response("board error", 400)
 
         # create new game here and save
         data = CreateNewGame(duration, random, board)
@@ -99,7 +140,7 @@ def edit_game(gid):
         try:
             gid = int(gid)
         except ValueError:
-            return create_response("Invalid id type", 400)
+            return create_response("Invalid id", 404)
 
         present, status = GetCurrentState(gid)
         if not present:
@@ -110,23 +151,15 @@ def edit_game(gid):
 
         # make a change to the game state
         try:
-            gid_data = content['id']
-            token = content['token']
-            word = content['word']
+            gid_data = custom_gid_conversion(content)
+            token = custom_token_conversion(content)
+            word = custom_word_conversion(content)
 
-            if type(token) != str or type(word) != str or type(gid_data) != int:
-                return create_response("invalid type for token or word", 400)
+            if token == "Error" or word == "!Error!":
+                return create_response("Invalid token or word", 404)
 
-            try:
-                gid = int(gid)
-                gid_data = int(gid_data)
-            except ValueError:
-                return create_response("Invalid id type", 400)
-
-            if gid != gid_data:
-                return create_response("id does not match", 400)
-
-            word = word.upper()
+            if int(gid) != gid_data:
+                return create_response("id does not match", 404)
 
             present, status = EditGameState(int(gid), token, word, VALID_WORDS)
             if not present:
@@ -134,7 +167,7 @@ def edit_game(gid):
 
             return status
         except KeyError:
-            return create_response("missing parameters", 400)
+            return create_response("missing or invalid parameters", 400)
         except Exception as e:
             print(e)
             return create_response(e.__str__(), 404)

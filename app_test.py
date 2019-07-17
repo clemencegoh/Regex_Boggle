@@ -88,7 +88,7 @@ class TestCreateEndpoint(unittest.TestCase):
         # Should NOT be same as hardcoded
         self.assertNotEqual(content['board'], 'T, A, P, *, E, A, K, S, O, B, R, S, S, *, X, D')
 
-    def test_create_invalid_type(self):
+    def test_create_valid_wrong_random_type(self):
         """
         Create new game with invalid type for random
         - Duration
@@ -101,7 +101,7 @@ class TestCreateEndpoint(unittest.TestCase):
             "board": ""
         }
         resp = requests.post(BASE_URL, json=params)
-        self.assertEqual(resp.status_code, 400, "response code not correct")
+        self.assertEqual(resp.status_code, 201, "response code not correct")
 
     def test_create_invalid_type_duration(self):
         """
@@ -116,7 +116,27 @@ class TestCreateEndpoint(unittest.TestCase):
             "board": ""
         }
         resp = requests.post(BASE_URL, json=params)
-        self.assertEqual(resp.status_code, 400, "response code not correct")
+        self.assertEqual(resp.status_code, 201, "response code not correct")
+
+    def test_create_false_invalid_board(self):
+        params = {
+            "duration": 1000,
+            "random": False,
+            "board": 'T, X, D',
+        }
+        resp = requests.post(BASE_URL, json=params)
+        self.assertEqual(resp.status_code, 201, "response code not correct")
+        content = json.loads(resp.content)
+        print(content)
+        self.assertIsNotNone(content, "No json body returned")
+
+        self.assertTrue(content['id'], 'id empty: {}'.format(content['id']))
+        self.assertTrue(content['token'], 'token empty: {}'.format(content['token']))
+        self.assertTrue(content['duration'], 'duration empty: {}'.format(content['duration']))
+        self.assertTrue(content['board'], 'board empty: {}'.format(content['board']))
+
+        # Should be same as hardcoded
+        self.assertEqual(content['board'], 'T, A, P, *, E, A, K, S, O, B, R, S, S, *, X, D')
 
 
 ####
@@ -149,7 +169,7 @@ class TestPlayEndpoint(unittest.TestCase):
             'word': 'TAPE'
         }
         resp = requests.put(BASE_URL + '/' + str(gid), json=params)
-        self.assertEqual(resp.status_code, 200, resp)
+        self.assertEqual(resp.status_code, 200, resp.content)
         content = json.loads(resp.content)
 
         # ensure response correct
@@ -195,7 +215,7 @@ class TestPlayEndpoint(unittest.TestCase):
             'token': token,
             'word': 'TAPE'
         }
-        resp = requests.put(BASE_URL + '/1000', json=params)
+        resp = requests.put(BASE_URL + '/hii', json=params)
         self.assertEqual(resp.status_code, 404, resp)
 
     def test_play_invalid_token(self):
@@ -249,7 +269,7 @@ class TestPlayEndpoint(unittest.TestCase):
             'token': token,
         }
         resp = requests.put(BASE_URL + '/' + str(gid), json=params)
-        self.assertEqual(resp.status_code, 400, resp)
+        self.assertEqual(resp.status_code, 404, resp)
 
     def test_play_wrong_type_duration(self):
         """
@@ -281,7 +301,7 @@ class TestPlayEndpoint(unittest.TestCase):
             "board": ""
         }
         resp = requests.post(BASE_URL, json=params)
-        self.assertEqual(resp.status_code, 400, resp.content)
+        self.assertEqual(resp.status_code, 201, resp.content)
 
     def test_play_wrong_type_board(self):
         """
@@ -297,7 +317,7 @@ class TestPlayEndpoint(unittest.TestCase):
             "board": 10,
         }
         resp = requests.post(BASE_URL, json=params)
-        self.assertEqual(resp.status_code, 400, resp.content)
+        self.assertEqual(resp.status_code, 201, resp.content)
 
     def test_play_mismatch_id(self):
         """
@@ -324,7 +344,7 @@ class TestPlayEndpoint(unittest.TestCase):
             'word': 'TAPE'
         }
         resp = requests.put(BASE_URL + '/' + str(gid), json=params)
-        self.assertEqual(resp.status_code, 400, resp)
+        self.assertEqual(resp.status_code, 404, resp)
 
 
 ######
@@ -400,7 +420,7 @@ class TestGetEndpoint(unittest.TestCase):
         :return: 400
         """
         resp = requests.get(BASE_URL + "/" + "hello")
-        self.assertEqual(400, resp.status_code, "response code not correct")
+        self.assertEqual(404, resp.status_code, "response code not correct")
 
 
 if __name__ == '__main__':

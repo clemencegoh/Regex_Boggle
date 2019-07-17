@@ -30,6 +30,9 @@ class GameBoard:
     def from_gameboard_string(self, board):
         self.gameboard = board
         parsed_gameboard = self.gameboard.split(', ')
+        if len(parsed_gameboard) != 16:
+            # use default
+            self.UseDefaultBoard('webapp/data/test_board.txt')
         parsed_gameboard = [x.upper() for x in parsed_gameboard]
         self.gameboard2D = []
         counter = 0
