@@ -164,24 +164,24 @@ def edit_game(gid):
             print(e)
             return create_response(e.__str__(), 404)
 
-app.run(port=5000)
+# app.run(port=5000)
 
 
-# if __name__ == "__main__":
-#     """
-#     For development purposes only,
-#     single-threaded instance
-#     """
-#
-#     parser = argparse.ArgumentParser(description='Runs server for boggle webapp')
-#     parser.add_argument('--dev', action='store_true',
-#                         help='run in dev mode on port 5000')
-#
-#     args = parser.parse_args()
-#
-#     print(args.dev)
-#
-#     if args.dev:
-#         app.run(port=5000)
-#     else:
-#         app.run(host="0.0.0.0", port=80)
+if __name__ == "__main__":
+    """
+    For development purposes only,
+    single-threaded instance
+    """
+
+    parser = argparse.ArgumentParser(description='Runs server for boggle webapp')
+    parser.add_argument('--dev', action='store_true',
+                        help='run in dev mode on port 5000')
+
+    args = parser.parse_args()
+
+    print(args.dev)
+
+    if args.dev:
+        app.run(port=5000)
+    else:
+        app.run(host="0.0.0.0", port=80)

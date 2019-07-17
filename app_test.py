@@ -8,7 +8,7 @@ import json
 import time
 
 
-BASE_URL = 'http://localhost:5000/games'
+BASE_URL = 'http://18.236.132.102/games'
 
 
 class TestCreateEndpoint(unittest.TestCase):
