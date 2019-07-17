@@ -123,7 +123,7 @@ def create_game():
         return response
 
     except KeyError:
-        return create_response("one or more params invalid or missing", 404)
+        return create_response("one or more params invalid or missing", 400)
 
 
 @app.route('/games/<gid>', methods=['PUT', 'GET'])
