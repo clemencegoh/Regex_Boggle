@@ -33,6 +33,7 @@ class GameBoard:
         if len(parsed_gameboard) != 16:
             # use default
             self.UseDefaultBoard('webapp/data/test_board.txt')
+            return
         parsed_gameboard = [x.upper() for x in parsed_gameboard]
         self.gameboard2D = []
         counter = 0

@@ -339,11 +339,10 @@ class TestPlayEndpoint(unittest.TestCase):
         token = content['token']
 
         params = {
-            'id': gid + 1,
             'token': token,
             'word': 'TAPE'
         }
-        resp = requests.put(BASE_URL + '/' + str(gid), json=params)
+        resp = requests.put(BASE_URL + '/' + str(gid + 100), json=params)
         self.assertEqual(resp.status_code, 404, resp)
 
 
